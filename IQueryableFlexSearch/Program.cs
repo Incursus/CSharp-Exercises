@@ -52,7 +52,7 @@ namespace IQueryableFlexSearch
                 Console.WriteLine("We didn't find anything.");
             }
 
-            foreach (var student in studentQuery)
+            foreach (Student student in studentQuery)
             {
                 Console.WriteLine(
                          "{0} {1} with an {2} grade average.",

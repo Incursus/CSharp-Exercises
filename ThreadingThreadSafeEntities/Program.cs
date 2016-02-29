@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ThreadingThreadSafeEntities
 {
-   internal class Program
+    internal class Program
     {
-        static readonly object LockObject = new object();
         private static void Main()
         {
             ConcurrentBag<int> numbers = new ConcurrentBag<int>();
@@ -18,10 +14,10 @@ namespace ThreadingThreadSafeEntities
             Thread thread1 = new Thread(() =>
             {
                 Console.WriteLine("Thread 1");
-                Thread.Sleep(1);
 
                 for (int i = 0; i < 1000; i++)
                 {
+                    Thread.Sleep(1);
                     Console.WriteLine($"Adding {i} from Thread 1");
                     numbers.Add(i);
                 }
@@ -38,10 +34,8 @@ namespace ThreadingThreadSafeEntities
 
             for (int i = 0; i < 1000; i++)
             {
-                foreach (var number in numbers)
-                {
-                    Console.WriteLine(number);
-                }
+                Thread.Sleep(1);
+                Console.WriteLine($"Any: {numbers.Any()} from Thread 2");
             }
         }
     }

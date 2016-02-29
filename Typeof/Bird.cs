@@ -2,9 +2,9 @@
 {
     class Bird : Animal
     {
-        public static void GetType()
+        public static new void GetType()
         {
-            
+
         }
     }
 }
