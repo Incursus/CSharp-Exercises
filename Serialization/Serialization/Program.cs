@@ -10,12 +10,8 @@ namespace Serialization
         //http://www.newtonsoft.com/json
         private static void Main()
         {
-            CoffeeMaker coffee = new CoffeeMaker("Lavazza", 5);
-
-            string json = JsonConvert.SerializeObject(coffee);
-            Console.WriteLine(json);
-
-            File.WriteAllText("Coffee.json", json);
+            string text = "lol";
+            string json = JsonConvert.SerializeObject(text);
         }
     }
 }
