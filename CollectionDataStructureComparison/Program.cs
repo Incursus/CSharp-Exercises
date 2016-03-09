@@ -59,9 +59,6 @@ namespace CollectionDataStructureComparison
             {
                 Console.WriteLine(name);
             }
-
-
-
         }
     }
 }
