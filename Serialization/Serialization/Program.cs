@@ -10,10 +10,15 @@ namespace Serialization
         //http://www.newtonsoft.com/json
         private static void Main()
         {
+<<<<<<< HEAD
             CoffeeMaker coffee = new CoffeeMaker();
             string json = JsonConvert.SerializeObject(coffee);
 
             Console.WriteLine(json);
+=======
+            string text = "lol";
+            string json = JsonConvert.SerializeObject(text);
+>>>>>>> 8aca9171e4ba3be44e9bb2fd09ca5c74c7e12edf
         }
     }
 }
