@@ -1,0 +1,6 @@
+﻿namespace Typeof
+{
+    class Animal
+    {
+    }
+}
