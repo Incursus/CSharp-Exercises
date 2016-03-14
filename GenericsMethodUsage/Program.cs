@@ -33,11 +33,11 @@ namespace GenericsMethodUsage
             grades.Add(4);
             grades.Add(2);
 
-            var secondName = GetSecondElement(names);
+            string secondName = GetSecondElement(names);
             Console.WriteLine($"Second name: {secondName}");
-            var secondGrade = GetSecondElement(grades);
+            int secondGrade = GetSecondElement(grades);
             Console.WriteLine($"Second grade: {secondGrade}");
-            var secondAge = GetSecondElement(ages);
+            short secondAge = GetSecondElement(ages);
             Console.WriteLine($"Second age: {secondAge}");
         }
 

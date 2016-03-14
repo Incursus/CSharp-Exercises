@@ -4,39 +4,51 @@ using System.Diagnostics;
 
 namespace MeasuringCodeExecutionTime
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        //HashSet suranda ~100k kartų greičiau nei list.
+        private static void Main()
         {
-            Stopwatch stopwatch = new Stopwatch();
-
             List<string> listRandomSymbols = new List<string>();
             HashSet<string> hastSetRandomSymbols = new HashSet<string>();
 
             string symbols = "abcdefghjjklmnobABHWDW)QIJD_QW_D)QW_D>>>>>DMDWQOJD4654891235489569845126598";
-            Random random = new Random();
 
-            if (listRandomSymbols.Count < 100000)
+            for (int i = 0; i < 100000; i++)
             {
-                listRandomSymbols.Add(random.Next(symbols.Length).ToString());
+                listRandomSymbols.Add(symbols + i);
+                hastSetRandomSymbols.Add(symbols + i);
             }
 
-            stopwatch.Start();
-            listRandomSymbols.Contains("DMD");
-            Console.WriteLine("List search took " + stopwatch.Elapsed);
-            stopwatch.Stop();
+            CheckContains(listRandomSymbols);
+            CheckContains(hastSetRandomSymbols);
 
-            if (hastSetRandomSymbols.Count < 100000)
+            var stopwatch = Stopwatch.StartNew();
+            CheckContains(hastSetRandomSymbols);
+            stopwatch.Stop();
+            Console.WriteLine("HashSet search took " + stopwatch.Elapsed);
+
+
+            var stopwatch2 = Stopwatch.StartNew();
+            CheckContains(listRandomSymbols);
+            stopwatch2.Stop();
+            Console.WriteLine("List search took " + stopwatch2.Elapsed);
+        }
+
+        private static void CheckContains(List<string> listRandomSymbols)
+        {
+            for (int i = 0; i < 100; i++)
             {
-                hastSetRandomSymbols.Add(random.Next(symbols.Length).ToString());
+                listRandomSymbols.Contains("DMD");
             }
+        }
 
-            stopwatch.Start();
-            listRandomSymbols.Contains("123");
-            Console.WriteLine("Hash Set search took " + stopwatch.Elapsed);
-            stopwatch.Stop();
-
-
+        private static void CheckContains(HashSet<string> hastSetRandomSymbols)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                hastSetRandomSymbols.Contains("DMD");
+            }
         }
     }
 }

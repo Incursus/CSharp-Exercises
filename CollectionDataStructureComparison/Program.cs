@@ -1,90 +1,70 @@
-<<<<<<< HEAD
 ﻿using System;
-=======
-﻿using System.Collections;
->>>>>>> 8aca9171e4ba3be44e9bb2fd09ca5c74c7e12edf
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CollectionDataStructureComparison
 {
     internal class Program
     {
-<<<<<<< HEAD
         private static void Main()
         {
             //https://github.com/RehanSaeed/.NET-Big-O-Algorithm-Complexity-Cheat-Sheet/blob/master/Cheat%20Sheet.pdf
             //http://www.vcskicks.com/csharp_data_structures2.php
 
-            var sortedSetNames = new SortedSet<string>();
-            var hashSetNames = new HashSet<string>();
-            var sortedListNames =  new List<string>();
+            HandleSortedSet();
+            HandleHashSet();
+            HandleSortedList();
+            HandleList();
+        }
+
+        private static void HandleList()
+        {
+            var listNames = new List<string> {"Jonas", "Jonas", "Darius", "Gvidas"};
+
+            Console.WriteLine("List Names:");
+            Print(listNames);
+            Console.WriteLine("");
+        }
+
+        private static void HandleSortedList()
+        {
+            var sortedListNames = new List<string> {"Jonas", "Jonas", "Darius", "Gvidas"};
             sortedListNames.Sort();
-            var listNames = new List<string>();
 
-            sortedSetNames.Add("Jonas");
-            sortedSetNames.Add("Jonas");
-            sortedSetNames.Add("Darius");
-            sortedSetNames.Add("Gvidas");
+            Console.WriteLine("Sorted List Names:");
+            Print(sortedListNames);
+        }
 
+        private static void HandleHashSet()
+        {
+            var hashSetNames = new HashSet<string>();
             hashSetNames.Add("Jonas");
             hashSetNames.Add("Jonas");
             hashSetNames.Add("Darius");
             hashSetNames.Add("Gvidas");
 
-            sortedListNames.Add("Jonas");
-            sortedListNames.Add("Jonas");
-            sortedListNames.Add("Darius");
-            sortedListNames.Add("Gvidas");
-
-            listNames.Add("Jonas");
-            listNames.Add("Jonas");
-            listNames.Add("Darius");
-            listNames.Add("Gvidas");
-
             Console.WriteLine("Hash Set names:");
-            foreach (var name in hashSetNames)
-            {
-                Console.WriteLine(name);
-            }
+            Print(hashSetNames);
+        }
+
+        private static void HandleSortedSet()
+        {
+            var sortedSetNames = new SortedSet<string>();
+            sortedSetNames.Add("Jonas");
+            sortedSetNames.Add("Jonas");
+            sortedSetNames.Add("Darius");
+            sortedSetNames.Add("Gvidas");
 
             Console.WriteLine("Sorted Set Names:");
-            foreach (var name in sortedSetNames)
-            {
-                Console.WriteLine(name);
-            }
+            Print(sortedSetNames);
+        }
 
-            Console.WriteLine("Sorted List Names:");
-            foreach (var name in sortedListNames)
-            {
-                Console.WriteLine(name);
-            }
-
-            Console.WriteLine("List Names:");
-            foreach (var name in listNames)
-            {
-                Console.WriteLine(name);
-            }
-=======
-        private static void Main(string[] args)
+        public static void Print<T>(IEnumerable<T> elements)
         {
-            //https://github.com/RehanSaeed/.NET-Big-O-Algorithm-Complexity-Cheat-Sheet/blob/master/Cheat%20Sheet.pdf
-            //http://www.vcskicks.com/csharp_data_structures2.php
-            /*Duotas studentų sąrašas su vardais ir pavardėm. Kokią sąrašo struktūrą naudoti našumo atžvilgiu vieno studento paieškai:
-            1.Kai tikimasi jog visi studentų vardai yra unikalūs ir jų eilė sąraše yra svarbi ? O(n) 
-           2.Kai visi studentų vardai unikalūs ir eilė sąraše nesvarbi ?
-          3.Kai tarp studentų vardų gali būti pasikartojimų ir eilė sąraše svarbi ?
-         4.Gali būti pasikartojimų ir eilė sąraše nesvarbi?
-        HINT: bus keturios atskiros struktūros.*/
-            /*
-              Redas, Gvidas, Darius.
-              */
-
-            var firstNamesWithFirstNames = new SortedDictionary<string, string>();
-            firstNamesWithFirstNames.Add("Redas", "Redas");
-
-
-
->>>>>>> 8aca9171e4ba3be44e9bb2fd09ca5c74c7e12edf
+            foreach (var element in elements)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }
+
