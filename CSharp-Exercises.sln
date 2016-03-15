@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionDataStructureComp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasuringCodeExecutionTime", "MeasuringCodeExecutionTime\MeasuringCodeExecutionTime\MeasuringCodeExecutionTime.csproj", "{909255AC-A4BA-461F-9BB1-232532B69CD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasuringMemoryUsage", "MeasuringMemoryUsage\MeasuringMemoryUsage.csproj", "{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +293,10 @@ Global
 		{909255AC-A4BA-461F-9BB1-232532B69CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{909255AC-A4BA-461F-9BB1-232532B69CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{909255AC-A4BA-461F-9BB1-232532B69CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
