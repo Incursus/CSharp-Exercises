@@ -10,26 +10,33 @@ namespace MeasuringMemoryUsage
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            List<string> listRandomSymbols = new List<string>();
+            Process process = Process.GetCurrentProcess();
+            var workingSetBefore = process.WorkingSet64;
+            Console.WriteLine($"Before list: {workingSetBefore}");
+
+            //List<string> listRandomSymbols = new List<string>();
             HashSet<string> hastSetRandomSymbols = new HashSet<string>();
 
             string symbols = "abcdefghjjklmnobABHWDW)QIJD_QW_D)QW_D>>>>>DMDWQOJD4654891235489569845126598";
 
-            for (int i = 0; i < 100000; i++)
+            for (int i = 0; i < 1000000; i++)
             {
-                listRandomSymbols.Add(symbols + i);
+                //listRandomSymbols.Add(symbols + i);
                 hastSetRandomSymbols.Add(symbols + i);
             }
 
-            Process memory = new Process();
+            process = Process.GetCurrentProcess();
+            Console.WriteLine($"After list: {process.WorkingSet64}");
+            Console.WriteLine("Memory allocated: " + ((process.WorkingSet64-workingSetBefore)/(1024*1024)) + " Megabytes");
+
             //memory.PagedSystemMemorySize64(listRandomSymbols);
-            var listMemory = Process.GetProcesses(listRandomSymbols.ToString());
+            /*var listMemory = Process.GetProcesses(listRandomSymbols.ToString());
             var hashSetMemory = Process.GetProcesses(hastSetRandomSymbols.ToString());
 
             Console.WriteLine(listMemory.ToString());
-            Console.WriteLine(hashSetMemory.ToString());
+            Console.WriteLine(hashSetMemory.ToString());*/
         }
     }
 }
