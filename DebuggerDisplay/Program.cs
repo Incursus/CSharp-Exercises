@@ -12,6 +12,7 @@ namespace DebuggerDisplay
             House house = new House();
             house.Number = "18";
             house.Street = "Jovaru";
+            house.Number = "20";
         }
     }
  }

@@ -12,7 +12,7 @@ namespace Singleton
         {
             SingletonB._instance.Test();
             Test test = new Test();
-            test.Name = "Darius";
+            test.Name = "Redas";
         }
     }
 }

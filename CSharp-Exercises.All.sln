@@ -105,6 +105,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCapitalization.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.ShowVsShowDialog", "WinForms.ShowVsShowDialog\WinForms.ShowVsShowDialog.csproj", "{18DB29C5-99EC-444C-A8E4-6DC3495D784D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenceTypeVsValueType", "ReferenceTypeVsValueType\ReferenceTypeVsValueType.csproj", "{EA7D74A3-D954-4177-82B1-C6B50445F99E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostfixVsPrefixOperators", "IncrementDecrementPostfixVsPrefix\PostfixVsPrefixOperators.csproj", "{44FE8759-4400-4719-9F74-C6FD1637B751}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +319,14 @@ Global
 		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7D74A3-D954-4177-82B1-C6B50445F99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7D74A3-D954-4177-82B1-C6B50445F99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7D74A3-D954-4177-82B1-C6B50445F99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7D74A3-D954-4177-82B1-C6B50445F99E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FE8759-4400-4719-9F74-C6FD1637B751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FE8759-4400-4719-9F74-C6FD1637B751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FE8759-4400-4719-9F74-C6FD1637B751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FE8759-4400-4719-9F74-C6FD1637B751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
