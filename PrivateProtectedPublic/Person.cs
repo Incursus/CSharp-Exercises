@@ -4,7 +4,7 @@ namespace PrivateProtectedPublic
 {
     public abstract class Person
     {
-        public string FirstName = "Redas";
+        public string FirstName = "Darius";
         public string LastName = "Kriksciukaitis";
         protected int Age = 23;
         private string typeName = "I am a black typeName.";
