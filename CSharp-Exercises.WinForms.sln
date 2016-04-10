@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.ShowVsShowDialog", "WinForms.ShowVsShowDialog\WinForms.ShowVsShowDialog.csproj", "{18DB29C5-99EC-444C-A8E4-6DC3495D784D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndOr", "AndOr\AndOr.csproj", "{F38A7D53-79C6-4BA8-B86A-E8B3D067F44E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DB29C5-99EC-444C-A8E4-6DC3495D784D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38A7D53-79C6-4BA8-B86A-E8B3D067F44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38A7D53-79C6-4BA8-B86A-E8B3D067F44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38A7D53-79C6-4BA8-B86A-E8B3D067F44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38A7D53-79C6-4BA8-B86A-E8B3D067F44E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
