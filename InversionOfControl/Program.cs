@@ -19,7 +19,7 @@ namespace InversionOfControl
 
         public void Start()
         {
-            Console.WriteLine($"Grinding {Beans.Name} beans...");
+            Console.WriteLine($"Grinding {Beans.Name} beans, please wait...");
         }
     }
 
