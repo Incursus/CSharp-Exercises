@@ -26,8 +26,7 @@ namespace SqlConnectToCSharp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=REDAS-PC;Initial Catalog=test;Persist Security Info=True;User ID=sa;P" +
-            "assword=labas12")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=REDAS-PC;Initial Catalog=test;Persist Security Info=True")]
         public string testConnectionString {
             get {
                 return ((string)(this["testConnectionString"]));

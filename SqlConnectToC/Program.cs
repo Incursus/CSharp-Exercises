@@ -8,12 +8,12 @@ namespace SqlConnectToCSharp
         private static void Main()
         {
             SqlConnection sqlConnection =
-                new SqlConnection("Data Source=(local);Initial Catalog=test;User ID=sa;Password=labas12");
+                new SqlConnection("Server = localhost; Database = TestDatabase; Integrated Security = True;");
 
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand("select * from Friend", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("select * from Test", sqlConnection))
                 {
                     using (var sqlDataReader = sqlCommand.ExecuteReader())
                     {

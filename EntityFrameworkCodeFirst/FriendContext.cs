@@ -6,7 +6,7 @@ namespace EntityFrameworkCodeFirst
     {
         public DbSet<Friend> Friends { get; set; }
 
-        public FriendContext() : base("Data Source=localhost;Initial Catalog=EntityFrameworkTest;User ID=sa;Password=labas12")
+        public FriendContext() : base("Data Source=localhost;Initial Catalog=EntityFrameworkTest;")
         {
         }
 
