@@ -15,7 +15,8 @@ namespace AspDotNetTest
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleCollection bundles = BundleTable.Bundles;
+            BundleConfig.RegisterBundles(bundles);
         }
     }
 }
