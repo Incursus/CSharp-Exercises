@@ -8,13 +8,13 @@ namespace IQueryableOr
     {
         private static void Main()
         {
-            Console.WriteLine("Please enter a first name.");
+            Console.WriteLine("Please enter the student's first name.");
             string firstName = Console.ReadLine();
 
-            Console.WriteLine("Please enter a last name.");
+            Console.WriteLine("Please enter the student's last name.");
             string lastName = Console.ReadLine();
 
-            Console.WriteLine("Please enter a grade average.");
+            Console.WriteLine("Please enter the student's grade average.");
             string gradeAverage = Console.ReadLine();
 
             List<Student> students = new List<Student>();

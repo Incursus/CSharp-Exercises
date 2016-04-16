@@ -9,6 +9,8 @@ namespace AspDotNetTest
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.UseCdn = true;
+
             Bundle jQueryBundle = new ScriptBundle("~/bundles/jquery")
                 .Include("~/Scripts/jquery-{version}.js");
             bundles.Add(jQueryBundle);
@@ -29,8 +31,12 @@ namespace AspDotNetTest
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/font-awesome").Include(
-                "~/Content/font-awesome.css"));
+            Bundle faBundle = new StyleBundle(
+                virtualPath: "~/Content/font-awesome",
+                cdnPath: "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+                .Include("~/Content/font-awesome.css");
+
+            bundles.Add(faBundle);
         }
     }
 }
