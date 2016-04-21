@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasuringCodeExecutionTime"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasuringMemoryUsage", "MeasuringMemoryUsage\MeasuringMemoryUsage.csproj", "{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderVsStringConcatenationSBWins", "StringBuilderVsStringConcatenationSBWins\StringBuilderVsStringConcatenationSBWins.csproj", "{61D4F958-076F-45FA-980F-F4A214FA561C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderVsStringConcatenationSCWins", "StringBuilderVsStringConcatenationSCWins\StringBuilderVsStringConcatenationSCWins.csproj", "{6505E084-6E54-43B4-BCC6-5362F3867BBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA0AAAB0-1C00-4D7B-90BD-56AA5E617F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D4F958-076F-45FA-980F-F4A214FA561C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D4F958-076F-45FA-980F-F4A214FA561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D4F958-076F-45FA-980F-F4A214FA561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D4F958-076F-45FA-980F-F4A214FA561C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6505E084-6E54-43B4-BCC6-5362F3867BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6505E084-6E54-43B4-BCC6-5362F3867BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6505E084-6E54-43B4-BCC6-5362F3867BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6505E084-6E54-43B4-BCC6-5362F3867BBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

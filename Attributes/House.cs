@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace DebuggerDisplay
+namespace Attributes
 {
     [DebuggerDisplay("{DebuggerDisplay}")]
     public class House

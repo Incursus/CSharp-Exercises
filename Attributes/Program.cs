@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-
-namespace DebuggerDisplay
+﻿namespace Attributes
 {
     //http://progrunning.net/what-ive-learned-today-debugging-with-debuggerdisplay-attribute/
     class Program
