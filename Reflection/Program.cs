@@ -20,7 +20,7 @@ namespace Reflection
             BindingFlags bindFlags = BindingFlags.Instance | BindingFlags.NonPublic;
 
             FieldInfo field = type.GetField(fieldName, bindFlags);
-            //ternary operator bellow. Iš esmės klausia ar null ar ne? 
+            //ternary operator bellow. Iš esmės klausia: ar reikšmė null ar ne? 
             return field?.GetValue(memberInstance);
         }
     }

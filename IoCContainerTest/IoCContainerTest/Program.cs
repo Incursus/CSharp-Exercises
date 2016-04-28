@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Unity;
+﻿using System;
+using Microsoft.Practices.Unity;
 
 namespace IoCContainerTest
 {
@@ -9,6 +10,9 @@ namespace IoCContainerTest
             IUnityContainer myContainer = new UnityContainer();
 
             myContainer.RegisterType(typeof(MyEmailService), "MyBestEmail");
+            myContainer.RegisterType(typeof (IEmailChecker), typeof (EmailChecker));
+            var test = myContainer.Resolve<MyEmailService>();
+            Console.WriteLine(test.GetType());
         }
     }
 }
