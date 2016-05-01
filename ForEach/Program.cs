@@ -27,7 +27,7 @@ namespace ForEach
                 }
             }
           
-            Console.WriteLine("These are the {0} grades that passed the exam out of an overall of 101 students", filteredGrades.Count);
+            Console.WriteLine("These are the {0} grades that passed the exam out of an overall of 101 students:", filteredGrades.Count);
 
             foreach (int grade in filteredGrades)
             {
