@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex", "Regex\Regex.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelFor", "PLINQ\ParallelFor.csproj", "{286943DC-F38C-41D6-93CD-A476822DB4F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQ", "PLINQ\PLINQ.csproj", "{D929F511-886B-4454-97AD-267E79612BC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -363,6 +365,10 @@ Global
 		{286943DC-F38C-41D6-93CD-A476822DB4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{286943DC-F38C-41D6-93CD-A476822DB4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{286943DC-F38C-41D6-93CD-A476822DB4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D929F511-886B-4454-97AD-267E79612BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D929F511-886B-4454-97AD-267E79612BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D929F511-886B-4454-97AD-267E79612BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D929F511-886B-4454-97AD-267E79612BC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
