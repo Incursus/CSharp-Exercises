@@ -6,7 +6,7 @@ namespace InvertedEnum
     {
         static void Main()
         {
-            Console.WriteLine("Enter 'Front', 'Top' or 'Mixed' and we'll tell you which machine does what");
+            Console.WriteLine("Enter 'Front', 'Top', 'Mixed' to know which machine to pick.");
             var userValue = Console.ReadLine();
             var parsedValue = Enum.Parse(typeof(WashingMachine), userValue);
 
