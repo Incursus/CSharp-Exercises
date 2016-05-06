@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LambdaExpression
 {
@@ -23,6 +24,8 @@ namespace LambdaExpression
             }
 
             List<string> matchedStrings = randomStrings.FindAll(x => x.Contains("a"));
+            List<string> matchedStringsWithoutContainedMethod =
+                randomStrings.FindAll(symbol => symbol.IndexOf("a"));
             foreach (var matchedString in matchedStrings)
             {
                 Console.WriteLine(matchedString);
