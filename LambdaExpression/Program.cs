@@ -8,7 +8,7 @@ namespace LambdaExpression
     {
         static void Main()
         {
-            //http://www.dotnetperls.com/lambda
+            //http://www.codeproject.com/Tips/298963/Understand-Lambda-Expressions-in-minutes
 
             char[] chars = "$%#@!*abcdefghijklmnopqrstuvwxyz1234567890?;:ABCDEFGHIJKLMNOPQRSTUVWXYZ^&".ToCharArray();
             Random r = new Random();
@@ -23,10 +23,16 @@ namespace LambdaExpression
                 randomStrings.Add(randomString);    
             }
 
-            List<string> matchedStrings = randomStrings.FindAll(x => x.Contains("a"));
-            List<string> matchedStringsWithoutContainedMethod =
-                randomStrings.FindAll(symbol => symbol.IndexOf("a"));
-            foreach (var matchedString in matchedStrings)
+            List<string> matchedStringsUsingContains = randomStrings.FindAll(x => x.Contains("a"));
+        
+            //Without Contains().
+            List<string> matchedStringsUsingAny =
+                randomStrings.FindAll(symbol => symbol.Any(specificSymbol => specificSymbol == 'a'));
+
+            List<string> matchedStringUsingIndex =
+                randomStrings.FindAll(symbol => symbol.IndexOf('a') != -1);
+
+            foreach (var matchedString in matchedStringUsingIndex)
             {
                 Console.WriteLine(matchedString);
             }
