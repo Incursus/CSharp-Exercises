@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoolNickName.cs" />
     <Compile Include="Fnatic.cs" />
     <Compile Include="Nip.cs" />
     <Compile Include="Program.cs" />

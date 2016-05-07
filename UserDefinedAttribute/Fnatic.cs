@@ -2,11 +2,8 @@
 
 namespace UserDefinedAttribute
 {
+    [CoolNickName("JW")]
     public class Fnatic
     {
-        public void PrintCaptainName()
-        {
-            Console.WriteLine("Add attribute first");
-        }
     }
 }
