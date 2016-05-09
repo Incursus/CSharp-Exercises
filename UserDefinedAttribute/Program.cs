@@ -13,32 +13,30 @@ namespace UserDefinedAttribute
         //https://msdn.microsoft.com/en-us/library/mt653983.aspx
         static void Main(string[] args)
         {
-            Fnatic fnatic = new Fnatic();
-            Nip nip = new Nip();
-
             Program program = new Program();
             program.PrintAttributeInfo();
+            PrintCoolNickNameInfo(typeof(Nip));
         }
 
         private static void PrintCoolNickNameInfo(System.Type type)
         {
             System.Attribute[] customAttributes = System.Attribute.GetCustomAttributes(type);
-            Console.WriteLine(customAttributes);
+            //Console.WriteLine(customAttributes);
 
             foreach (Attribute attribute in customAttributes)
             {
-                if (attribute is CoolNickName)
-                {
-                    CoolNickName coolNickName = (CoolNickName) attribute;
-                    Console.WriteLine($"{coolNickName._nickName}");
-                }
+                /*if (attribute is CoolNickName)
+                {*/
+                    CoolNickName coolNickName;
+                    Console.WriteLine(attribute.ToString());
+                //}
             }
         }
 
         public void PrintAttributeInfo()
         {
-            PrintCoolNickNameInfo(typeof(Nip));
             PrintCoolNickNameInfo(typeof(Fnatic));
+            PrintCoolNickNameInfo(typeof(Nip));
         }
     }
 }

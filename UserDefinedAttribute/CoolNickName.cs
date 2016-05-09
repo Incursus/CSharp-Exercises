@@ -8,7 +8,7 @@ namespace UserDefinedAttribute
 
         public CoolNickName(string _nickName)
         {
-          this._nickName = "flusha";
+          this._nickName = "summitoneegg";
         }
 
         public string GetNickName()
