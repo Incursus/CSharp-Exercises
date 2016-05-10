@@ -1,19 +1,14 @@
 ﻿using System;
 namespace UserDefinedAttribute
 {
-
+    [AttributeUsage(AttributeTargets.Class)]
     public class CoolNickName : Attribute
     {
-        public string _nickName;
+        public string Name { get; private set; }
 
-        public CoolNickName(string _nickName)
+        public CoolNickName(string name)
         {
-          this._nickName = "summitoneegg";
+            Name = name;
         }
-
-        public string GetNickName()
-        {
-            return _nickName;
-        } 
     }
 }

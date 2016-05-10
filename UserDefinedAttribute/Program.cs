@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace UserDefinedAttribute
 {
@@ -11,32 +6,24 @@ namespace UserDefinedAttribute
     {
         //https://msdn.microsoft.com/en-us/library/mt653985.aspx
         //https://msdn.microsoft.com/en-us/library/mt653983.aspx
-        static void Main(string[] args)
-        {
-            Program program = new Program();
-            program.PrintAttributeInfo();
-            PrintCoolNickNameInfo(typeof(Nip));
-        }
-
-        private static void PrintCoolNickNameInfo(System.Type type)
-        {
-            System.Attribute[] customAttributes = System.Attribute.GetCustomAttributes(type);
-            //Console.WriteLine(customAttributes);
-
-            foreach (Attribute attribute in customAttributes)
-            {
-                /*if (attribute is CoolNickName)
-                {*/
-                    CoolNickName coolNickName;
-                    Console.WriteLine(attribute.ToString());
-                //}
-            }
-        }
-
-        public void PrintAttributeInfo()
+        static void Main()
         {
             PrintCoolNickNameInfo(typeof(Fnatic));
             PrintCoolNickNameInfo(typeof(Nip));
+        }
+
+        private static void PrintCoolNickNameInfo(Type type)
+        {
+            Attribute[] customAttributes = Attribute.GetCustomAttributes(type);
+
+            foreach (Attribute attribute in customAttributes)
+            {
+                var coolNickName = attribute as CoolNickName;
+                if (coolNickName != null)
+                {
+                    Console.WriteLine($"{coolNickName.Name} -- {type.Name}");
+                }
+            }
         }
     }
 }
