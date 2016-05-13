@@ -8,10 +8,6 @@ namespace EntityFrameworkCodeFirst
 
         public FriendContext() : base("Data Source=localhost;Initial Catalog=EntityFrameworkTest;")
         {
-        }
-
-        public FriendContext(string lol) : base()
-        {
-        }
+        }   
     }
 }
