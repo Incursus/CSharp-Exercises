@@ -4,11 +4,16 @@ namespace ThisKeyword
 {
     public class Student
     {
-        private string name = "Darius";
+        private string name = null;
 
         public Student(string name)
         {
-            Console.WriteLine(name);
+
+        }
+
+        public string GetName()
+        {
+            return name;
         }
     }
 }
