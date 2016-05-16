@@ -6,6 +6,7 @@ namespace ReferenceTypeVsValueType
     {
         static void Main()
         {
+            //http://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized
             //Reference type. Reference types are referenced (not being copied)/point to the same object.
             Console.WriteLine("Changing student name via method from Kajon to Redas");
             Student student = new Student();
