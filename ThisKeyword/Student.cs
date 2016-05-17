@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace ThisKeyword
+﻿namespace ThisKeyword
 {
     public class Student
     {
-        private string name = null;
+        private string name;
 
         public Student(string name)
         {
@@ -13,7 +11,6 @@ namespace ThisKeyword
 
         public string GetName()
         {
-            Console.WriteLine(name);
             return name;
         }
     }

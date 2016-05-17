@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ThisKeyword
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Student student = new Student("Gvidas");
-            student.GetName();
+            var studentName = student.GetName();
+            Console.WriteLine(studentName);
         }
     }
 }
