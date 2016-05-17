@@ -8,11 +8,12 @@ namespace ThisKeyword
 
         public Student(string name)
         {
-
+           this.name = name;
         }
 
         public string GetName()
         {
+            Console.WriteLine(name);
             return name;
         }
     }
