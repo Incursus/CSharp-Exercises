@@ -4,6 +4,8 @@
     {
         static void Main()
         {
+            //https://msdn.microsoft.com/en-us/library/79b3xss3.aspx
+
             Twitch.GoTurbo("static");
             "redk@test.com".ToConsole();
 
