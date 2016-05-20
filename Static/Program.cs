@@ -6,11 +6,10 @@
         {
             //https://msdn.microsoft.com/en-us/library/79b3xss3.aspx
 
-            Twitch.GoTurbo("static");
-            "redk@test.com".ToConsole();
+            Twitch.GoTurbo("bobross@yahoo.com");
 
             var turbo = new Twitch();
-            turbo.GoTurboNonStatic("non-static");
+            turbo.GoTurboNonStatic("Redas@gmail.com");
         }
     }
 }
