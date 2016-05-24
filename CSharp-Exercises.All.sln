@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisKeyword", "ThisKeyword\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{44A48DCD-956D-4E90-9CBC-5C41DF658ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptDocumentLoadedEvent", "JavaScriptDocumentLoadedEvent\JavaScriptDocumentLoadedEvent.csproj", "{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -393,6 +395,10 @@ Global
 		{44A48DCD-956D-4E90-9CBC-5C41DF658ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44A48DCD-956D-4E90-9CBC-5C41DF658ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44A48DCD-956D-4E90-9CBC-5C41DF658ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
