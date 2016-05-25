@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Extensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptDocumentLoadedEvent", "JavaScriptDocumentLoadedEvent\JavaScriptDocumentLoadedEvent.csproj", "{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptIncludeFileFromAsp.net", "JavaScriptIncludeFileFromAsp.net\JavaScriptIncludeFileFromAsp.net.csproj", "{9C024F6C-44E3-4AF4-ADE6-C1ACF0B6ACD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -399,6 +401,10 @@ Global
 		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE0F5F2-C9AF-4393-A876-5A339CC25AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C024F6C-44E3-4AF4-ADE6-C1ACF0B6ACD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C024F6C-44E3-4AF4-ADE6-C1ACF0B6ACD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C024F6C-44E3-4AF4-ADE6-C1ACF0B6ACD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C024F6C-44E3-4AF4-ADE6-C1ACF0B6ACD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
