@@ -7,6 +7,7 @@ namespace Interfaces
         public void Brew()
         {
             Console.WriteLine("Brewing standard coffee with CuisineArts.");
+            Froth();
         }
 
         public void Froth()

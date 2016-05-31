@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interfaces
+﻿namespace Interfaces
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             BellaDotsCoffeeMaker bellaCoffeeMaker = new BellaDotsCoffeeMaker();
             CuisineArtsCoffeeMaker cuisineArtsCoffeeMaker = new CuisineArtsCoffeeMaker();
@@ -16,10 +10,7 @@ namespace Interfaces
 
             bellaCoffeeMaker.Brew();
             cuisineArtsCoffeeMaker.Brew();
-            cuisineArtsCoffeeMaker.Froth();
             hamiltonCoffeeMaker.Brew();
-            hamiltonCoffeeMaker.Froth();
-            hamiltonCoffeeMaker.UseCofeePill();
         }
     }
 }

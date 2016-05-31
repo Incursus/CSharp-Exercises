@@ -7,6 +7,8 @@ namespace Interfaces
         public void Brew()
         {
             Console.WriteLine("Brewing water wtih Hamilton.");
+            Froth();
+            UseCofeePill();
         }
 
         public void Froth()
