@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace InterfacesMultipleInheritance
 {
     public class CuisineArtsCoffeeMaker : ICoffeeMaker, IFroth
     {

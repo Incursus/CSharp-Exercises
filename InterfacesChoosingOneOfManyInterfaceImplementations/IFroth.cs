@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace InterfacesChoosingOneOfManyInterfaceImplementations
 {
     public interface IFroth
     {
