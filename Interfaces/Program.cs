@@ -4,9 +4,9 @@
     {
         static void Main()
         {
-            BellaDotsCoffeeMaker bellaCoffeeMaker = new BellaDotsCoffeeMaker();
-            CuisineArtsCoffeeMaker cuisineArtsCoffeeMaker = new CuisineArtsCoffeeMaker();
-            HamiltonCoffeeMaker hamiltonCoffeeMaker = new HamiltonCoffeeMaker();
+            ICoffeeMaker bellaCoffeeMaker = new BellaDotsCoffeeMaker();
+            ICoffeeMaker cuisineArtsCoffeeMaker = new CuisineArtsCoffeeMaker();
+            ICoffeeMaker hamiltonCoffeeMaker = new HamiltonCoffeeMaker();
 
             bellaCoffeeMaker.Brew();
             cuisineArtsCoffeeMaker.Brew();
