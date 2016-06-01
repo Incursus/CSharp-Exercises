@@ -15,6 +15,7 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             ICoffeeMaker bellaCoffeeMaker = new BellaDotsCoffeeMaker();
             ICoffeeMaker cuisineArtsCoffeeMaker = new CuisineArtsCoffeeMaker();
             ICoffeeMaker hamiltonCoffeeMaker = new HamiltonCoffeeMaker();
+            ICoffeeMaker brilleCoffeeMaker = new BrilleCoffeeMaker();
 
             if (userMilkValue == "Y" && userCoffeePillValue == "N")
             {
@@ -28,11 +29,9 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             {
                 bellaCoffeeMaker.Brew();
             }
-            if (userMilkValue != "Y" && userCoffeePillValue != "N" || 
-                userMilkValue != "Y" && userCoffeePillValue == "Y" || 
-                userMilkValue != "N" && userCoffeePillValue != "N")
+            if (userMilkValue == "N" && userCoffeePillValue == "Y")
             {
-                Console.WriteLine("Something went wrong. Try again.");
+                brilleCoffeeMaker.Brew();
             }
         }
     }
