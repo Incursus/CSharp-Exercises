@@ -18,21 +18,21 @@ namespace ConcreteExceptionCatching
             numbers[8] = 4;
             numbers[9] = 7;
 
-            Console.WriteLine("Please choose a number from 0 to 9, and you'll get a corresponding number from the array.");
+            Console.WriteLine("Please choose a number from 1 to 10, and you'll get a corresponding number from the array.");
 
             try
             {
                 short userValue = Convert.ToInt16(Console.ReadLine());
 
-                Console.WriteLine($"The corresponding number in the array is {numbers[userValue]}");
+                Console.WriteLine($"The corresponding number in the array is {numbers[userValue - 1]}");
             }
-            catch (IndexOutOfRangeException exception)
+            catch (IndexOutOfRangeException)
             {
-                Console.WriteLine(exception);
+                Console.WriteLine("This number is not valid please try again.");
             }
-            catch (FormatException exception)
+            catch (FormatException)
             {
-                Console.WriteLine($"WE GOT AND ERROR!!! {exception}. Please try again.");
+                Console.WriteLine($"Please enter a number, cause you did not.");
             }
         }
     }
