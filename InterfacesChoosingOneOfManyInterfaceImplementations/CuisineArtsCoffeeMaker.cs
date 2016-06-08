@@ -8,6 +8,10 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
         {
             Console.WriteLine("CuisineArts can brew standard coffee");
             Froth();
+
+            var brewCoffee = true;
+            var coffeePill = false;
+            var frothMilk = true;
         }
 
         public void Froth()

@@ -25,7 +25,9 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             coffeeMakers.Add(hamiltonCoffeeMaker);
             coffeeMakers.Add(brilleCoffeeMaker);
 
-            coffeeMakers = coffeeMakers.AsQueryable().Where()
+            var standardCoffeeMaker = coffeeMakers.AsQueryable().Where(maker => 
+            (userMilkValue == "N" || maker.));
+
 
            /* if (userMilkValue == "Y" && userCoffeePillValue == "N")
             {

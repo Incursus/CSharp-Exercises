@@ -8,6 +8,10 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
         {
             Console.WriteLine("Brille is brewing...");
             UseCoffeePill();
+
+            var brewCoffee = true;
+            var coffeePill = true;
+            var frothMilk = false;
         }
 
         public void UseCoffeePill()
