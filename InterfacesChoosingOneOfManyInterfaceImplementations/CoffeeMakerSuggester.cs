@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace InterfacesChoosingOneOfManyInterfaceImplementations
 {
@@ -17,7 +19,15 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             ICoffeeMaker hamiltonCoffeeMaker = new HamiltonCoffeeMaker();
             ICoffeeMaker brilleCoffeeMaker = new BrilleCoffeeMaker();
 
-            if (userMilkValue == "Y" && userCoffeePillValue == "N")
+            List<ICoffeeMaker> coffeeMakers = new List<ICoffeeMaker>();
+            coffeeMakers.Add(bellaCoffeeMaker);
+            coffeeMakers.Add(cuisineArtsCoffeeMaker);
+            coffeeMakers.Add(hamiltonCoffeeMaker);
+            coffeeMakers.Add(brilleCoffeeMaker);
+
+            coffeeMakers = coffeeMakers.AsQueryable().Where()
+
+           /* if (userMilkValue == "Y" && userCoffeePillValue == "N")
             {
                 cuisineArtsCoffeeMaker.Brew();
             }
@@ -32,7 +42,7 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             if (userMilkValue == "N" && userCoffeePillValue == "Y")
             {
                 brilleCoffeeMaker.Brew();
-            }
+            }*/
         }
     }
 }
