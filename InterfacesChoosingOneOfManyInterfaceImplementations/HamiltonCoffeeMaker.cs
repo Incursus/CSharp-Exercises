@@ -9,10 +9,6 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             Console.WriteLine("Hamilton can bew regular coffee.");
             Froth();
             UseCoffeePill();
-
-            var brewCoffee = true;
-            var coffeePill = true;
-            var frothMilk = true;
         }
 
         public void Froth()
