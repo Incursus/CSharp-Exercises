@@ -27,7 +27,8 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
             coffeeMakers.Add(brilleCoffeeMaker);
 
             IQueryable<ICoffeeMaker> queryable = coffeeMakers
-                .Where(maker => userMilkValue == "N" || (maker as IFroth) != null)
+                .Where(maker => (userMilkValue == "N" || (maker as IFroth) != null)
+                && (userCoffeePillValue == "N" || (maker as ICoffeePill) != null))
                 .AsQueryable();
 
             ICoffeeMaker foundCoffeeMaker = queryable.FirstOrDefault();
