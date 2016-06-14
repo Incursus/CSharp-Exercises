@@ -6,7 +6,7 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
     {
         public void Brew()
         {
-            Console.WriteLine("Hamilton can bew regular coffee.");
+            Console.WriteLine("Hamilton can brew regular coffee.");
             Froth();
             UseCoffeePill();
         }

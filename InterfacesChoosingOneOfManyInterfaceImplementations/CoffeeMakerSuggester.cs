@@ -15,20 +15,15 @@ namespace InterfacesChoosingOneOfManyInterfaceImplementations
                 "Do you prefer your coffee from a pill (quick n' easy but doesn't taste as good)? Type Y (yes) or N (no)");
             string userCoffeePillValue = Console.ReadLine().ToUpper();
 
-            ICoffeeMaker bellaCoffeeMaker = new BellaDotsCoffeeMaker();
-            ICoffeeMaker cuisineArtsCoffeeMaker = new CuisineArtsCoffeeMaker();
-            ICoffeeMaker hamiltonCoffeeMaker = new HamiltonCoffeeMaker();
-            ICoffeeMaker brilleCoffeeMaker = new BrilleCoffeeMaker();
-
             List<ICoffeeMaker> coffeeMakers = new List<ICoffeeMaker>();
-            coffeeMakers.Add(bellaCoffeeMaker);
-            coffeeMakers.Add(cuisineArtsCoffeeMaker);
-            coffeeMakers.Add(hamiltonCoffeeMaker);
-            coffeeMakers.Add(brilleCoffeeMaker);
+            coffeeMakers.Add(new BellaDotsCoffeeMaker());
+            coffeeMakers.Add(new CuisineArtsCoffeeMaker());
+            coffeeMakers.Add(new HamiltonCoffeeMaker());
+            coffeeMakers.Add(new BrilleCoffeeMaker());
 
             IQueryable<ICoffeeMaker> queryable = coffeeMakers
-                .Where(maker => (userMilkValue == "N" || (maker as IFroth) != null)
-                && (userCoffeePillValue == "N" || (maker as ICoffeePill) != null))
+                .Where(maker => (userMilkValue == "N" || (maker as IFroth) != null) &&
+                                (userCoffeePillValue == "N" || (maker as ICoffeePill) != null))
                 .AsQueryable();
 
             ICoffeeMaker foundCoffeeMaker = queryable.FirstOrDefault();
