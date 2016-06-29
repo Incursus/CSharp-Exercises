@@ -2,27 +2,27 @@
 {
     public class Calculator
     {
-        public int Multiply(int firstNumber, int secondNumber)
+        public double Multiply(double firstNumber, double secondNumber)
         {
-            int result = firstNumber*secondNumber;
+            double result = firstNumber*secondNumber;
             return result;
         }
 
-        public int Divide(int firstNumber, int secondNumber)
+        public double Divide(double firstNumber, double secondNumber)
         {
-            int result = firstNumber/secondNumber;
+            double result = firstNumber/secondNumber;
             return result;
         }
 
-        public int Add(int firstNumber, int secondNumber)
+        public double Add(double firstNumber, double secondNumber)
         {
-            int result = firstNumber+secondNumber;
+            double result = firstNumber+secondNumber;
             return result;
         }
 
-        public int Subtract(int firstNumber, int secondNumber)
+        public double Subtract(double firstNumber, double secondNumber)
         {
-            int result = firstNumber-secondNumber;
+            double result = firstNumber-secondNumber;
             return result;
         }
         

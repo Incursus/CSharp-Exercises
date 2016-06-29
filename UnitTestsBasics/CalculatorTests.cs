@@ -55,7 +55,31 @@ namespace UnitTestsBasics
             Assert.Fail("Expected DivideByZeroException");
 
             //Assert.Throws(typeof(DivideByZeroException), () => calculator.DivideByZeroShouldThrow(5, 0));
-            
-        } 
+        }
+
+        [Test]
+        public void DivideReturnsNegativeNumberIfFirstNumberNegativeSecondPositive()
+        {
+            var result = calculator.Divide(-5, 2);
+
+            Assert.AreEqual(-2.5, result);
+        }
+
+        [Test]
+        public void DivideReturnsNegativeNumberIfFirstNumberPositiveSecondNegative()
+        {
+            var result = calculator.Divide(5, -2);
+
+            Assert.AreEqual(-2.5, result);
+        }
+
+        [Test]
+        public void DivideReturnsPositiveNumberIfBothNumbersNegative()
+        {
+            var result = calculator.Divide(-5, -2);
+
+            Assert.AreEqual(2.5, result);
+        }
+
     }
 }
