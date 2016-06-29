@@ -15,15 +15,7 @@ namespace UnitTestsBasics
         }
 
         [Test]
-        public void MultiplyReturnsZeroIfSecondNumberIsZero()
-        {
-            var result = calculator.Multiply(5, 0);
-
-            Assert.AreEqual(0, result);
-        }
-
-        [Test]
-        public void MultiplyReturnsPositiveNumberIfBothArgumentsArePositive()
+        public void MultiplyShouldReturnCorrectMultiplicationResult()
         {
             var result = calculator.Multiply(5, 5);
 
@@ -31,55 +23,25 @@ namespace UnitTestsBasics
         }
 
         [Test]
-        public void DivideReturnsZeroIfFirstNumberIsZero()
+        public void MultiplyShouldSupportResultThatIsHigherThanIntMax()
         {
-            var result = calculator.Divide(0, 5);
+            var result = calculator.Multiply(int.MaxValue, 2);
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(4294967294, result);
         }
 
         [Test]
-        public void DivideByZeroShouldThrow()
+        public void DivideShouldThrowIfSecondNumberZero()
         {
-            try
-            {
-                var result = calculator.Divide(5, 0);
-            }
-            catch (Exception e)
-            {
-                if (e is DivideByZeroException)
-                {
-                    return;
-                }
-            }
-            Assert.Fail("Expected DivideByZeroException");
-
-            //Assert.Throws(typeof(DivideByZeroException), () => calculator.DivideByZeroShouldThrow(5, 0));
+            Assert.Throws(typeof(DivideByZeroException), () => calculator.Divide(5, 0));
         }
 
         [Test]
-        public void DivideReturnsNegativeNumberIfFirstNumberNegativeSecondPositive()
+        public void DivideShouldReturnCorrectDivisionResult()
         {
-            var result = calculator.Divide(-5, 2);
+            var result = calculator.Divide(10, 2);
 
-            Assert.AreEqual(-2.5, result);
+            Assert.AreEqual(5, result);
         }
-
-        [Test]
-        public void DivideReturnsNegativeNumberIfFirstNumberPositiveSecondNegative()
-        {
-            var result = calculator.Divide(5, -2);
-
-            Assert.AreEqual(-2.5, result);
-        }
-
-        [Test]
-        public void DivideReturnsPositiveNumberIfBothNumbersNegative()
-        {
-            var result = calculator.Divide(-5, -2);
-
-            Assert.AreEqual(2.5, result);
-        }
-
     }
 }

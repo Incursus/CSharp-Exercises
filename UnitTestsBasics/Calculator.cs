@@ -1,16 +1,12 @@
-﻿namespace UnitTestsBasics
+﻿using System;
+
+namespace UnitTestsBasics
 {
     public class Calculator
     {
-        public double Multiply(double firstNumber, double secondNumber)
+        public long Multiply(long firstNumber, long secondNumber)
         {
-            double result = firstNumber*secondNumber;
-            return result;
-        }
-
-        public double Divide(double firstNumber, double secondNumber)
-        {
-            double result = firstNumber/secondNumber;
+            long result = firstNumber*secondNumber;
             return result;
         }
 
@@ -25,6 +21,10 @@
             double result = firstNumber-secondNumber;
             return result;
         }
-        
+
+        public decimal Divide(decimal firstNumber, decimal secondNumber)
+        {
+            return firstNumber / secondNumber;
+        }
     }
 }
