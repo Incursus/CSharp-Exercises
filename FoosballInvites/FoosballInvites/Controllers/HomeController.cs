@@ -29,9 +29,7 @@ namespace FoosballInvites.Controllers
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
             if (ModelState.IsValid)
-                return View("Ačiū", guestResponse);
-
-            else
+                return View("Thanks", guestResponse);
             {
                 return View();
             }
