@@ -30,6 +30,8 @@ namespace FoosballInvites.Controllers
         {
             if (ModelState.IsValid)
                 return View("Thanks", guestResponse);
+
+            else
             {
                 return View();
             }
