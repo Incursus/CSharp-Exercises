@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCIntroduction.Models;
 
 namespace MVCIntroduction.Controllers
 {
@@ -11,19 +12,24 @@ namespace MVCIntroduction.Controllers
         // GET: Student
         public ActionResult Index()
         {
-            return View();
+            var model = new List<Team>();
+
+            model.Add(new Team {Name = "MU"});
+            model.Add(new Team {Name = "Chelsea"});
+
+            return View(model);
         }
 
-        public List<string> CreateStudentList()
-        {
-            List<string> students = new List<string>();
+        /* public List<string> CreateStudentList()
+         {
+             List<string> students = new List<string>();
 
-            students.Add("Jonas Bardačiokas");
-            students.Add("Kazys Balkonas");
-            students.Add("Bronius Lietpaltis");
-            students.Add("Nerijus Upėtakius");
+             students.Add("Jonas Bardačiokas");
+             students.Add("Kazys Balkonas");
+             students.Add("Bronius Lietpaltis");
+             students.Add("Nerijus Upėtakius");
 
-            return students;
-        }
+             return students;
+         }*/
     }
 }
