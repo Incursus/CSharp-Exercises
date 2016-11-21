@@ -1,13 +1,5 @@
-﻿@model IEnumerable<Standings.Models.Team>
-
-@{
-    ViewBag.Title = "Standings";
-}
-
-@foreach (var item in Model)
+﻿@model List<string>
+@foreach (var element in Model)
 {
-    <div>
-        @item.Name
-        <hr />
-    </div>
+    <p>@Html.DisplayFor(m => element)</p>
 }
