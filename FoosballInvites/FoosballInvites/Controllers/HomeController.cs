@@ -1,10 +1,8 @@
-﻿using FoosballInvites.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 
 namespace FoosballInvites.Controllers
 {
@@ -14,27 +12,8 @@ namespace FoosballInvites.Controllers
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Labas rytas" : "Laba diena";
+            ViewBag.Greeting = hour < 12 ? "Good morning" : "Good day";
             return View();
-        }
-
-        [HttpGet]
-        public ViewResult RsvpForm()
-        {
-            return View();
-        }
-       
-
-        [HttpPost]
-        public ViewResult RsvpForm(GuestResponse guestResponse)
-        {
-            if (ModelState.IsValid)
-                return View("Thanks", guestResponse);
-
-            else
-            {
-                return View();
-            }
         }
     }
 }
