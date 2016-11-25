@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FoosballInvites.Models;
 
 namespace FoosballInvites.Controllers
 {
@@ -14,6 +15,19 @@ namespace FoosballInvites.Controllers
             int hour = DateTime.Now.Hour;
             ViewBag.Greeting = hour < 12 ? "Good morning" : "Good day";
             return View();
+        }
+
+        [HttpGet]
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(CollegueResponse collegueResponse)
+        {
+            // TODO: Email response to the party organizer
+            return View("Thanks", collegueResponse);
         }
     }
 }
