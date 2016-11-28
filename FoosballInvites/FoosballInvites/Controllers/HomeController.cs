@@ -26,8 +26,16 @@ namespace FoosballInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(CollegueResponse collegueResponse)
         {
-            // TODO: Email response to the party organizer
-            return View("Thanks", collegueResponse);
+            if (ModelState.IsValid)
+            {
+                // TODO: Email response to the party organizer
+                return View("Thanks", collegueResponse);
+            }
+            else
+            {
+                // there is a validation error
+                return View();
+            }
         }
     }
 }

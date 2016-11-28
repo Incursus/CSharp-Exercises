@@ -1,0 +1,27 @@
+﻿@model FoosballInvites.Models.CollegueResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+<div>
+    <h1>Thank you, @Model.Name!</h1>
+    @if (Model.WillPlay == true)
+    {
+        @:Šaunu, kamuoliukas paruoštas smūgiui!
+    }
+    else
+    {
+        @:Tuomet kitą kartą!
+    }
+</div>
+</body>
+</html>
