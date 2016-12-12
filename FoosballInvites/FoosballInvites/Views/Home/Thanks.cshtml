@@ -8,20 +8,47 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width"/>
     <title>Thanks</title>
+    <style>
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
 </head>
 <body>
-<div>
+@{
+    try
+    {
+        WebMail.SmtpServer = "smtp.example.com";
+        WebMail.SmtpPort = 587;
+        WebMail.EnableSsl = true;
+        WebMail.UserName = "mySmtpUsername";
+        WebMail.Password = "mySmtpPassword";
+        WebMail.From = "rsvps@example.com";
+        WebMail.Send("party-host@example.com", "RSVP Notification",
+        Model.Name + " is " + ((Model.WillPlay ?? false) ? "" : "not")
+        + "attending");
+    }
+    catch (Exception)
+    {
+        @:<b>Sorry - we couldn't send the email to confirm your RSVP.</b>
+}
+}
+<div class="text-center">
     <h1>Thank you, @Model.Name!</h1>
-    @if (Model.WillPlay == true)
-    {
-        @:Šaunu, kamuoliukas paruoštas smūgiui!
-    }
-    else
-    {
-        @:Tuomet kitą kartą!
-    }
+    <div class="lead">
+        @if (Model.WillPlay == true)
+        {
+            @:Šaunu, kamuoliukas paruoštas smūgiui!
+        }
+        else
+        {
+            @:Tuomet kitą kartą!
+        }
+    </div>
 </div>
 </body>
 </html>
